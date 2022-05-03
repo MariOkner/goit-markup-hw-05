@@ -127,7 +127,6 @@ img {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0;
 }
 
 .header-link-nav { 
@@ -293,9 +292,10 @@ img {
 .work-text {
     position: absolute;
     
-    bottom: 0;
-    margin: 27px auto;
-    
+    bottom: 0px;
+    padding-top: 27px;
+    padding-bottom: 27px;
+        
     width: 100%;
 
     font-weight: 700;
@@ -589,6 +589,8 @@ img {
 }
 .pictures-link {
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .pictures-link:hover,
 .pictures-link:focus {
@@ -603,6 +605,10 @@ img {
 }
 
 .pictures-link:hover .pictures-top-text {
+    transform: translateY(0%);
+}
+
+.pictures-link:focus .pictures-top-text {
     transform: translateY(0%);
 }
 
@@ -706,6 +712,7 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
     top: 8px;
     right: 8px;
+    cursor: pointer;
 }
 .btn-x {
     position: absolute;
